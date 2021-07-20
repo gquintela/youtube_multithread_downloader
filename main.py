@@ -16,8 +16,8 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     "--input_list",
     type=str,
-    help="url input list (DEFAULT='input_file.txt')",
-    default="input_file.txt",
+    help="url input list (DEFAULT='input_list.txt')",
+    default="input_list.txt",
     dest="input_list",
 )
 
@@ -36,7 +36,5 @@ binary = "pytube"
 file = args.input_list
 threads_qty = args.threads_qty
 
-if run(binary, file, threads_qty):
-    print("all files downloaded.")
-else:
+if not run(binary, file, threads_qty):
     print("error while downloading, please try again.")

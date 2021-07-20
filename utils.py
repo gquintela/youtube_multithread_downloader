@@ -1,6 +1,7 @@
 import subprocess
 import threading
 import os
+from pathlib import Path
 
 
 def download_list(binary, url_list):
@@ -13,7 +14,8 @@ def download_list(binary, url_list):
 
 
 def get_video_list(file):
-    if not os.exists(file):
+    file_path = Path(file)
+    if not file_path.is_file():
         print(f"{file} does not exist, please choose a valid input list file.")
         exit(0)
     try:
