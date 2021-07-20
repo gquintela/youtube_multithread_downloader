@@ -18,7 +18,7 @@ python3 main.py --input_list my_urls.txt --threads_qty 8
 Both arguments are optional:
 
 ```bash
---input_list    (DEFAULT='input_file.txt')
+--input_list    (DEFAULT='input_list.txt')
 --threads_qty   (DEFAULT=4)
 ```
 
